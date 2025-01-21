@@ -24,16 +24,16 @@ Change your Name and Google Form URL in the Program.cs file (Line 15 & 16)
 
 HOW TO RUN:
 
-   Option 1 (Run via VS Code Interface):
+Option 1 (Run via VS Code Interface):
 
-            Open the Program.cs file in Visual Studio Code.
+   Open the Program.cs file in Visual Studio Code.
+   
+   Click the down arrow button next to the "Run" button (play button) in the top-right corner of the screen.
+   
+   Select "Run Project Associated With This File".
             
-            Click the down arrow button next to the "Run" button (play button) in the top-right corner of the screen.
-            
-            Select "Run Project Associated With This File".
-            
-   Option 2 (In Terminal):
+Option 2 (In Terminal):
           
-            cd /path/to/Benjamin_is_Daddy
-            dotnet build
-            dotnet run
+         cd /path/to/Benjamin_is_Daddy
+         dotnet build
+         dotnet run
