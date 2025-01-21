@@ -24,7 +24,7 @@ Change your Name and Google Form URL in the Program.cs file (Line 15 & 16)
 
 HOW TO RUN:
 
-Option 1 (Run via VS Code Interface):
+#Option 1 (Run via VS Code Interface):
 
    Open the Program.cs file in Visual Studio Code.
    
