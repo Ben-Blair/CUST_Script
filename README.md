@@ -15,3 +15,7 @@ This project automates the process of interacting with a Google Form using Selen
    dotnet add package Selenium.WebDriver --version 4.28.0
    dotnet add package Selenium.Support --version 4.28.0
    dotnet add package Selenium.WebDriver.ChromeDriver --version 132.0.6834.8300
+
+Make sure the version for "Selenium.WebDriver.ChromeDriver" is the same as your Chrome-based browser. Mine is version 132.0.6834.8300
+
+To find the version, press the three lines at the top right of your browser, press help, then about.
