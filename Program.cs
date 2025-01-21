@@ -12,8 +12,8 @@ class Program
 
         // Google Form URL ENTER YOUR INFORMATION HERE
         //--------------------------------------------//
-        string formUrl = "https://docs.google.com/forms/d/e/1FAIpQLSe5AsHSMsDdoaHblYXNqkQjsqKDHUFK-7G0YwccQiKn017vKw/viewform?usp=dialog";
-        string yourName = "Ben Blair";
+        string formUrl = "https://docs.google.com/forms/d/e/1FAIpQLMsDdoaHblYXNqkQjsqKDHUFK-7G0YwccQiKn01vKw/viewform?usp=dialog";
+        string yourName = "John Smith";
         //--------------------------------------------//
 
         bool formSubmitted = false;
