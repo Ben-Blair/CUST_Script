@@ -1,13 +1,13 @@
  STEPS:
 
-      install DotNet 9.0
-https://dotnet.microsoft.com/en-us/download/dotnet?cid=getdotnetcorecli
+install DotNet 9.0
+     https://dotnet.microsoft.com/en-us/download/dotnet?cid=getdotnetcorecli
 
 
-        TYPE INTO TERMINAL ON VS CODE:
-dotnet add package Selenium.WebDriver --version 4.28.0
-dotnet add package Selenium.Support --version 4.28.0
-dotnet add package Selenium.WebDriver.ChromeDriver --version 132.0.6834.8300
+TYPE INTO TERMINAL ON VS CODE:
+      dotnet add package Selenium.WebDriver --version 4.28.0
+      dotnet add package Selenium.Support --version 4.28.0
+      dotnet add package Selenium.WebDriver.ChromeDriver --version 132.0.6834.8300
 
 
 Change name and Google form link URL on Program.cs file (Line 15 & 16)
