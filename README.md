@@ -6,8 +6,7 @@ I want to always get a spot on the trip.
 HOW TO RUN:
   install DotNet
   install ChromeDriver (same version as your Chromium-based browser such as Google Chrome)
-  
-  Change name and Google form link URL on Program.cs
-  cd to location of FormFiller
-  dotnet build
-  dotnet run
+  Change name and Google form link URL on Program.cs file
+  cd to location of FormFiller (In Terminal)
+  dotnet build (In Terminal)
+  dotnet run (In Terminal)
