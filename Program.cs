@@ -1,6 +1,7 @@
 using System;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Support.UI;
 
 class Program
 {
@@ -11,7 +12,7 @@ class Program
 
         // Google Form URL ENTER YOUR INFORMATION HERE
         //--------------------------------------------//
-        string formUrl = "https://forms.gle/SNjbknJbR8nczhZ29";
+        string formUrl = "https://docs.google.com/forms/d/e/1FAIpQLSe5AsHSMsDdoaHblYXNqkQjsqKDHUFK-7G0YwccQiKn017vKw/viewform?usp=dialog";
         string yourName = "Ben Blair";
         //--------------------------------------------//
 
@@ -24,34 +25,40 @@ class Program
                 // Navigate to the form URL
                 driver.Navigate().GoToUrl(formUrl);
 
-                // Locate the input field for the short answer or paragraph question
-                IWebElement inputField;
-                try
+                // Wait for the input field to be interactable dynamically
+                WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(0.2))
                 {
-                    // Try finding a short answer input field first
-                    inputField = driver.FindElement(By.XPath("//input[@type='text']"));
-                }
-                catch (NoSuchElementException)
-                {
-                    // If no short answer input field is found, look for a paragraph field
-                    inputField = driver.FindElement(By.XPath("//textarea"));
-                }
+                    PollingInterval = TimeSpan.FromMilliseconds(100) // Poll every 100ms
+                };
 
-                // Enter your name
+                IWebElement inputField = wait.Until(driver =>
+                {
+                    var element = FindElementSafely(driver, By.XPath("//input[@type='text']")) ??
+                                  FindElementSafely(driver, By.XPath("//textarea"));
+                    return (element != null && element.Displayed && element.Enabled) ? element : null;
+                });
+
+                // Scroll to the input field and enter your name
+                ScrollToElement(driver, inputField);
                 inputField.SendKeys(yourName);
 
-                // Locate the Submit button
-                IWebElement submitButton = driver.FindElement(By.XPath("//span[contains(text(), 'Submit')]"));
+                // Wait for the Submit button to be interactable dynamically
+                IWebElement submitButton = wait.Until(driver =>
+                {
+                    var element = FindElementSafely(driver, By.XPath("//span[contains(text(), 'Submit')]"));
+                    return (element != null && element.Displayed && element.Enabled) ? element : null;
+                });
 
-                // Click the Submit button
+                // Scroll to the Submit button and click it
+                ScrollToElement(driver, submitButton);
                 submitButton.Click();
 
                 Console.WriteLine("Form submitted successfully!");
                 formSubmitted = true; // Break the loop after submission
             }
-            catch (NoSuchElementException)
+            catch (WebDriverTimeoutException)
             {
-                Console.WriteLine($"Form not available yet. Retrying instantly at {DateTime.Now}...");
+                Console.WriteLine($"Form not ready yet. Retrying dynamically at {DateTime.Now}...");
             }
             catch (Exception ex)
             {
@@ -62,5 +69,24 @@ class Program
 
         // Close the browser
         driver.Quit();
+    }
+
+    // Helper method to find an element safely
+    static IWebElement FindElementSafely(IWebDriver driver, By by)
+    {
+        try
+        {
+            return driver.FindElement(by);
+        }
+        catch (NoSuchElementException)
+        {
+            return null;
+        }
+    }
+
+    // Helper method to scroll to an element
+    static void ScrollToElement(IWebDriver driver, IWebElement element)
+    {
+        ((IJavaScriptExecutor)driver).ExecuteScript("arguments[0].scrollIntoView(true);", element);
     }
 }
