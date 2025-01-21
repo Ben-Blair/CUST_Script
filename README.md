@@ -19,3 +19,5 @@ This project automates the process of interacting with a Google Form using Selen
 Make sure the version for "Selenium.WebDriver.ChromeDriver" is the same as your Chrome-based browser. Mine is version 132.0.6834.8300
 
 To find the version, press the three lines at the top right of your browser, press help, then about.
+
+Change your Name and Google Form URL in the Program.cs file (Line 15 & 16)
