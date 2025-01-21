@@ -34,6 +34,6 @@ HOW TO RUN:
             
 ### Option 2 (In Terminal):
           
-         cd /path/to/Benjamin_is_Daddy
+         cd /path/to/CUST_Script
          dotnet build
          dotnet run
