@@ -14,27 +14,28 @@ class Program
         // Default Chrome user data directory for macOS:
         // /Users/<YourMacUsername>/Library/Application Support/Google/Chrome (type whoami in mac terminal to find YourMacUsername)
         // --------------------------------------------------------------------
-        options.AddArguments(
-            "user-data-dir=/Users/user/Library/Application Support/Google/Chrome", //Replace with Windows path if using windows.
-            "profile-directory=Default"
-        );
-
-        // --------------------------------------------------------------------
-        // EXAMPLE (COMMENTED OUT) FOR WINDOWS:
-        // Typically located at C:\Users\<YourWindowsUsername>\AppData\Local\Google\Chrome\User Data
-        //
+        // EXAMPLE (COMMENTED OUT) FOR MAC:
         // options.AddArguments(
-        //     "user-data-dir=C:\\Users\\<YourWindowsUsername>\\AppData\\Local\\Google\\Chrome\\User Data",
+        //     "user-data-dir=/Users/user/Library/Application Support/Google/Chrome",
         //     "profile-directory=Default"
         // );
+
+        // --------------------------------------------------------------------
+        // EXAMPLE  FOR WINDOWS:
+        // Typically located at C:\Users\<YourWindowsUsername>\AppData\Local\Google\Chrome\User Data
+        //
+        options.AddArguments(
+            "user-data-dir=C:\\Users\\<YourWindowsUsername>\\AppData\\Local\\Google\\Chrome\\User Data",
+            "profile-directory=Default"
+        );
         // --------------------------------------------------------------------
 
         // Initialize ChromeDriver
         IWebDriver driver = new ChromeDriver(options);
 
         // Google Form URL
-        string formUrl = "https://docs.google.com/forms/d/e/1FAIpQLSe5AsHSMsDdoaHblYXNqkQjsqKDHUFK-7G0YwccQiKn017vKw/viewform?usp=dialog";
-        string yourName = "Makunt Izichi";
+        string formUrl = "ENTER GOOGLE FORM URL HERE";
+        string yourName = "Jane Doe";
 
         bool formSubmitted = false;
 
