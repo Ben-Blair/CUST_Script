@@ -12,7 +12,7 @@ class Program
 
         // --------------------------------------------------------------------
         // Default Chrome user data directory for macOS:
-        // /Users/<YourMacUsername>/Library/Application Support/Google/Chrome
+        // /Users/<YourMacUsername>/Library/Application Support/Google/Chrome (type whoami in mac terminal to find YourMacUsername)
         // --------------------------------------------------------------------
         options.AddArguments(
             "user-data-dir=/Users/user/Library/Application Support/Google/Chrome", //Replace with Windows path if using windows.
