@@ -21,6 +21,7 @@ Make sure the version for "Selenium.WebDriver.ChromeDriver" is the same as your 
 To find the version, press the three lines at the top right of your browser, press help, then about.
 
 Change your Name and Google Form URL in the Program.cs file (Line 15 & 16)
+Change Chrome User directory depending on Mac or Windows (Line 15 or 28)
 
 HOW TO RUN:
 
