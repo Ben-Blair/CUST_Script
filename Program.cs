@@ -22,7 +22,7 @@ class Program
 
         // --------------------------------------------------------------------
         // EXAMPLE  FOR WINDOWS:
-        // Typically located at C:\Users\<YourWindowsUsername>\AppData\Local\Google\Chrome\User Data
+        // Typically located at C:\Users\<YourWindowsUsername>\AppData\Local\Google\Chrome\User Data (in cmd type whoami to find YourWindowsUsername)
         //
         options.AddArguments(
             "user-data-dir=C:\\Users\\<YourWindowsUsername>\\AppData\\Local\\Google\\Chrome\\User Data",
