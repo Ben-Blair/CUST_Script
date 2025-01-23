@@ -24,7 +24,7 @@ Change your Name and Google Form URL in the Program.cs file (Line 15 & 16)
 
 Change Chrome User directory depending on Mac or Windows (Line 15 or 28)
 
-##HOW TO RUN:
+## HOW TO RUN:
 
 ### Option 1 (Run via VS Code Interface):
 
