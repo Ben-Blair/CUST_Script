@@ -22,10 +22,10 @@ class Program
 
         // --------------------------------------------------------------------
         // EXAMPLE  FOR WINDOWS:
-        // Typically located at C:\Users\<YourWindowsUsername>\AppData\Local\Google\Chrome\User Data (in cmd type whoami to find YourWindowsUsername)
+        // Typically located at C:\Users\<YourWindowsUsername>\AppData\Local\Google\Chrome\User Data
         //
         options.AddArguments(
-            "user-data-dir=C:\\Users\\<YourWindowsUsername>\\AppData\\Local\\Google\\Chrome\\User Data",
+            "user-data-dir=C:\\Users\\ben0r\\AppData\\Local\\Google\\Chrome\\User Data",
             "profile-directory=Default"
         );
         // --------------------------------------------------------------------
@@ -34,8 +34,8 @@ class Program
         IWebDriver driver = new ChromeDriver(options);
 
         // Google Form URL
-        string formUrl = "ENTER GOOGLE FORM URL HERE";
-        string yourName = "Jane Doe";
+        string formUrl = "https://docs.google.com/forms/d/e/1FAIpQLSe5AsHSMsDdoaHblYXNqkQjsqKDHUFK-7G0YwccQiKn017vKw/viewform?usp=dialog";
+        string yourName = "Ben Blair";
 
         bool formSubmitted = false;
 
